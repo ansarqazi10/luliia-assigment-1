@@ -49,7 +49,7 @@ const Checkboxes = () => {
 	return (
 		<div className="main">
 			<div className="box">
-				<div className="option">
+				<div className="optionsHeader">
 					<label htmlFor="selectAll">All Pages</label>
 					<input
 						type="checkbox"
@@ -97,15 +97,15 @@ const Checkboxes = () => {
 					<p>Here is the list of selected item(s)</p>
 					<hr className="separator" />
 					{result.length > 0 && (
-						<ul>
+						<div className="resultList">
 							{result.map((opt, idx) => {
 								return (
-									<li key={idx}>
+									<div key={idx}>
 										{idx + 1}. {opt.text}
-									</li>
+									</div>
 								);
 							})}
-						</ul>
+						</div>
 					)}
 					{result.length === 0 && (
 						<i className="noMessage">No item selected</i>

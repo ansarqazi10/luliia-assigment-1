@@ -1,30 +1,36 @@
 .App {
-	/* font-family: Montserrat; */
+	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 18.2px;
-	text-align: left;
 }
 
 .main {
 	display: block;
 	text-align: center;
-	width: 100%;
-	padding: 10px 0;
 }
 
 .box {
-	width: 340px;
+	width: 370px;
 	height: 326px;
 	margin: 85px auto 30px;
 	border: 1px solid #eee;
 	border-radius: 6px;
-	padding: 8px 15px 8px 22px;
 	box-shadow: 0px 8px 15px 0px #1414141f;
+	padding: 10px 0 0 0;
+}
+
+.optionsHeader {
+	height: 42px;
+	padding: 0px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .options {
 	height: 164px;
+	padding: 0px 15px;
 }
 
 .option {
@@ -35,8 +41,10 @@
 }
 
 .separatorDiv {
-	width: 340px;
 	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .separator {
@@ -46,16 +54,19 @@
 }
 
 .btnDiv {
-	width: 340px;
 	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .btn {
 	width: 340px;
 	height: 40px;
-	border: none;
 	border-radius: 4px;
+	border: none;
 	background-color: #ffce22;
+	padding: 10px 20px;
 }
 
 .btn:hover {
@@ -82,11 +93,6 @@
 	appearance: none;
 }
 
-.checkbox:checked {
-	border-radius: 12px !important;
-	appearance: auto;
-}
-
 .checkbox:not(:checked):hover {
 	background-image: url("/public/tick-hover.png");
 	background-size: 16px 16px;
@@ -102,27 +108,30 @@
 	box-shadow: 0px 8px 15px 0px #1414141f;
 }
 
+.checkbox:checked {
+	border-radius: 6px !important;
+	appearance: auto;
+}
+
 .checkbox:checked:hover {
 	appearance: auto;
 }
 
 .result {
 	text-align: center;
-	width: 340px;
+	width: 370px;
 	margin: 20px auto;
 	border: 1px solid #eee;
 	border-radius: 6px;
-	padding: 8px 15px 8px 22px;
+	padding: 8px 0px;
 	box-shadow: 0px 8px 15px 0px #1414141f;
 }
 
-ul {
-	list-style-type: none;
-}
-
-ul li {
-	font-size: 14px;
-	margin: 8px 0;
+.resultList {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 4px 0px;
 }
 
 .noMessage {
