@@ -7,22 +7,19 @@
 }
 
 .main {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: block;
 	text-align: center;
+	width: 100%;
+	padding: 10px 0;
 }
 
 .box {
-	width: 370px;
-	/* height: 326px; */
-	height: 336px;
-	margin: 85px auto;
+	width: 340px;
+	height: 326px;
+	margin: 85px auto 30px;
 	border: 1px solid #eee;
 	border-radius: 6px;
-	box-shadow: 2px;
 	padding: 8px 15px 8px 22px;
-	/* box-shadow: 0px 0px 4px 0px #1414141a; */
 	box-shadow: 0px 8px 15px 0px #1414141f;
 }
 
@@ -30,24 +27,44 @@
 	height: 164px;
 }
 
-.separatorDiv {
-	width: 370px;
-	height: 20px;
-	padding: 10px 0px;
-}
-
-.separator {
-	/* width: 340px; */
-	width: 370px;
-	height: 0px;
-	color: #cdcdcd;
-}
-
 .option {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 42px;
+}
+
+.separatorDiv {
+	width: 340px;
+	height: 20px;
+}
+
+.separator {
+	width: 340px;
+	height: 0px;
+	color: #cdcdcd;
+}
+
+.btnDiv {
+	width: 340px;
+	height: 60px;
+}
+
+.btn {
+	width: 340px;
+	height: 40px;
+	border: none;
+	border-radius: 4px;
+	background-color: #ffce22;
+}
+
+.btn:hover {
+	background: #ffd84d;
+	cursor: pointer;
+}
+
+.btn:focus {
+	background: #ffce22;
 }
 
 .checkBox {
@@ -58,21 +75,56 @@
 .checkbox {
 	width: 23px;
 	height: 23px;
-	border-radius: 6px 0px 0px 0px;
-	border: 1px 0px 0px 0px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
 	opacity: 0.6px;
+	cursor: pointer;
+	appearance: none;
 }
 
-.btnDiv {
-	width: 370px;
-	height: 60px;
+.checkbox:checked {
+	border-radius: 12px !important;
+	appearance: auto;
 }
 
-.btn {
+.checkbox:not(:checked):hover {
+	background-image: url("/public/tick-hover.png");
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.checkbox:not(:checked):focus {
+	background-image: url("/public/tick-focus.png");
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 0px 8px 15px 0px #1414141f;
+}
+
+.checkbox:checked:hover {
+	appearance: auto;
+}
+
+.result {
+	text-align: center;
 	width: 340px;
-	height: 40px;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 4px;
-	background-color: #ffce22;
+	margin: 20px auto;
+	border: 1px solid #eee;
+	border-radius: 6px;
+	padding: 8px 15px 8px 22px;
+	box-shadow: 0px 8px 15px 0px #1414141f;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	font-size: 14px;
+	margin: 8px 0;
+}
+
+.noMessage {
+	color: #bbb;
 }
